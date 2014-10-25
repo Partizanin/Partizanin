@@ -1,0 +1,72 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+       xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+       xsi:schemaLocation="http://www.springframework.org/schema/beans
+ http://www.springframework.org/schema/beans/spring-beans.xsd">
+
+    <bean id="man" class="week8.homework.domain.">
+
+        <property name="name" value="Buffon"/>
+        <property name="age" value="14"/>
+        <!-- collaborators and configuration for this bean go here -->
+    </bean>
+
+
+    <bean id="man2" class="week8.classwork.Man2">
+
+        <property name="name" value="Showkowsky"/>
+        <constructor-arg value="Griffon"/>
+
+        <constructor-arg value="3"/>
+        <!-- collaborators and configuration for this bean go here -->
+    </bean>
+
+
+    <bean id="woman" class="week8.classwork.Woman">
+        <property name="name" value="Helena"/>
+        <property name="man" ref="man"/>
+    </bean>
+
+    <bean id="boss1" class="week8.classwork.company.Boss">
+        <constructor-arg name="name" value="Vasa"/>
+        <constructor-arg name="age" value="33"/>
+    </bean>
+
+
+    <bean id="boss2" class="week8.classwork.company.Boss">
+        <constructor-arg name="name" value="Petya"/>
+        <constructor-arg name="age" value="33"/>
+    </bean>
+
+
+    <bean id="boss3" class="week8.classwork.company.Boss">
+        <constructor-arg name="name" value="Kolia"/>
+        <constructor-arg name="age" value="33"/>
+    </bean>
+
+
+    <bean id="boss4" class="week8.classwork.company.Boss">
+        <constructor-arg name="name" value="Valera"/>
+        <constructor-arg name="age" value="33"/>
+    </bean>
+
+
+    <bean id="secretary1" class="week8.classwork.company.Secretary">
+
+
+    </bean>
+
+    <bean id="company1" class="week8.classwork.company.Company">
+        <property name="fond" value="555"/>
+        <property name="name" value="IT-CENTRE"/>
+
+    </bean>
+
+    <bean id="company2" class="week8.classwork.company.Company">
+        <property name="fond" value="555"/>
+        <property name="name" value="CyberVision"/>
+
+    </bean>
+
+
+</beans>

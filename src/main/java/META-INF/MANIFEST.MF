@@ -1,0 +1,5 @@
+Manifest-Version: 1.0
+Class-Path: D:\Illia\Java\Projects\proff16\Partizanin\src\main\java\my
+ Work\timeCalculator
+Main-Class: myWork.timeCalculator.MainWindow
+

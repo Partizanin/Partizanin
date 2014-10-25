@@ -1,0 +1,94 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+       xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+       xmlns:context="http://www.springframework.org/schema/context"
+       xsi:schemaLocation="http://www.springframework.org/schema/beans
+         http://www.springframework.org/schema/beans/spring-beans-3.0.xsd
+         http://www.springframework.org/schema/context
+         http://www.springframework.org/schema/context/spring-context-3.0.xsd">
+
+    <context:property-placeholder location="classpath:session15/conf.properties"/>
+
+    <bean id="myDataSource" class="org.apache.commons.dbcp.BasicDataSource" destroy-method="close">
+        <property name="driverClassName" value="${driver}"/>
+        <property name="url" value="${url}"/>
+        <property name="username" value="${username}"/>
+        <property name="password" value="${password}"/>
+    </bean>
+
+    <bean id="sf" class="org.springframework.orm.hibernate4.LocalSessionFactoryBean">
+        <property name="dataSource" ref="myDataSource"/>
+        <property name="packagesToScan">
+            <list>
+                <value>week8.homework.domain</value>
+            </list>
+        </property>
+        <property name="hibernateProperties">
+            <value>
+                hibernate.dialect=org.hibernate.dialect.Oracle10gDialect
+                hibernate.show_sql=true
+                hibernate.hbm2ddl.auto=update<!--create//update//create-drop-->
+            </value>
+        </property>
+    </bean>
+
+
+    <bean id="manufactureDaoImpl" class="week8.homework.DAO.daoimpl.ManufactureDaoImpl">
+        <constructor-arg ref="sf"/>
+    </bean>
+
+    <bean id="memoryDaoImpl" class="week8.homework.DAO.daoimpl.MemoryDaoImpl">
+        <constructor-arg ref="sf"/>
+    </bean>
+
+    <bean id="notebooksTypeDaoImpl" class="week8.homework.DAO.daoimpl.NotebooksTypeDaoImpl">
+        <constructor-arg ref="sf"/>
+    </bean>
+
+
+    <bean id="processorDaoImpl" class="week8.homework.DAO.daoimpl.ProcessorDaoImpl">
+        <constructor-arg ref="sf"/>
+    </bean>
+
+    <bean id="salesDaoImpl" class="week8.homework.DAO.daoimpl.SalesDaoImpl">
+        <constructor-arg ref="sf"/>
+    </bean>
+
+    <bean id="warehouseDaoImpl" class="week8.homework.DAO.daoimpl.WarehouseDaoImpl">
+        <constructor-arg ref="sf"/>
+    </bean>
+
+    <bean id="manufacturerServiceimpl" class="week8.homework.service.serviceimpl.ManufacturerServiceimpl">
+        <constructor-arg ref="manufactureDaoImpl"/>
+    </bean>
+
+    <bean id="memoryServiceimpl" class="week8.homework.service.serviceimpl.MemoryServiceimpl">
+        <constructor-arg ref="memoryDaoImpl"/>
+    </bean>
+
+    <bean id="notebooksTypeServiceimpl" class="week8.homework.service.serviceimpl.NotebooksTypeServiceimpl">
+        <constructor-arg ref="notebooksTypeDaoImpl"/>
+    </bean>
+
+    <bean id="processorServiceimpl" class="week8.homework.service.serviceimpl.ProcessorServiceimpl">
+        <constructor-arg ref="processorDaoImpl"/>
+    </bean>
+
+    <bean id="salesServiceimpl" class="week8.homework.service.serviceimpl.SalesServiceimpl">
+        <constructor-arg ref="salesDaoImpl"/>
+    </bean>
+
+    <bean id="warehouseServiceImpl" class="week8.homework.service.serviceimpl.WarehouseServiceImpl">
+        <constructor-arg ref="warehouseDaoImpl"/>
+    </bean>
+
+    <bean id="consoleControl" class="week8.homework.view.ConsoleControl">
+        <constructor-arg index="0" ref="processorServiceimpl"/>
+        <constructor-arg index="1" ref="memoryServiceimpl"/>
+        <constructor-arg index="2" ref="manufacturerServiceimpl"/>
+        <constructor-arg index="3" ref="notebooksTypeServiceimpl"/>
+        <constructor-arg index="4" ref="warehouseServiceImpl"/>
+        <constructor-arg index="5" ref="salesServiceimpl"/>
+    </bean>
+
+</beans>

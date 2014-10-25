@@ -1,0 +1,34 @@
+<?xml version='1.0' encoding='utf-8'?>
+<!DOCTYPE hibernate-configuration PUBLIC
+        "-//Hibernate/Hibernate Configuration DTD 3.0//EN"
+        "http://hibernate.sourceforge.net/hibernate-configuration-3.0.dtd">
+<hibernate-configuration>
+    <session-factory>
+        <property name="connection.driver_class">oracle.jdbc.driver.OracleDriver</property>
+        <property name="connection.url">jdbc:oracle:thin:@localhost:1521:XE</property>
+        <property name="connection.username">notebooks</property>
+        <property name="connection.password">notebooks</property>
+        <property name="connection.pool_size">1</property>
+        <property name="dialect">org.hibernate.dialect.Oracle10gDialect</property>
+        <property name="current_session_context_class">thread</property>
+        <property name="cache.provider_class">org.hibernate.cache.NoCacheProvider</property>
+        <property name="show_sql">true</property>
+        <property name="hbm2ddl.auto">update</property>
+        <!--<mapping class="weekend3.dantist.domain.Client"/>-->
+        <!-- <mapping class="week6.classwork.notebooksdb.Notebook"/>-->
+        <!--     <mapping class="week6.classwork.arcitecture.Domain.Notebook"/>
+             &lt;!&ndash;<mapping class="week6.classwork.regiontable.ConfigEx"/>&ndash;&gt;
+             <mapping class="week7.classwork.session14.Employee"/>
+             <mapping class="week7.classwork.session14.dentist.domain.Client"/>
+             <mapping class="week7.classwork.session14.dentist.domain.Doctor"/>
+             <mapping class="week7.classwork.session14.Company"/>
+             <mapping class="week7.classwork.session14.Employee"/>-->
+
+        <mapping class="week7.homework.domain.Processor"/>
+        <mapping class="week7.homework.domain.Manufacturer"/>
+        <mapping class="week7.homework.domain.Memory"/>
+        <mapping class="week7.homework.domain.Sales"/>
+        <mapping class="week7.homework.domain.Notebook"/>
+        <mapping class="week7.homework.domain.Warehouse"/>
+    </session-factory>
+</hibernate-configuration>
