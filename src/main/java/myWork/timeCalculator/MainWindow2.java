@@ -310,7 +310,7 @@ public class MainWindow2 extends JFrame {
                     return;
                 }
             }
-  /*        if (getLength() > 7 ){
+ /*         if (getLength() > 7 ){
                 super.replace(offs,0,str,a);
         }*/
 
