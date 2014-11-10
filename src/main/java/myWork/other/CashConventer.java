@@ -1,4 +1,4 @@
-package myWork;
+package myWork.other;
 
 import java.math.BigDecimal;
 

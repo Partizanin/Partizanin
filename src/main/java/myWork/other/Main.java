@@ -1,4 +1,4 @@
-package myWork;
+package myWork.other;
 
 import javax.swing.*;
 import java.util.ArrayList;

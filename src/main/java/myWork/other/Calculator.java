@@ -1,10 +1,9 @@
-package myWork;
+package myWork.other;
 
 import java.awt.Button;
 import java.awt.Color;
 import java.awt.Event;
 import java.awt.Font;
-import java.awt.Frame;
 import java.awt.TextField;
 
 import javax.swing.JFrame;

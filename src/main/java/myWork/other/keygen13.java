@@ -1,4 +1,4 @@
-package myWork;
+package myWork.other;
 
 import java.math.BigInteger;
 import java.util.Date;
@@ -13,7 +13,7 @@ import java.util.zip.CRC32;
  * Time:  10:02
  * To change this template use File|Setting|File Templates.
  */
-public class keygen {
+public class keygen13 {
     /**
      * @param s
      * @param i
@@ -121,10 +121,11 @@ public class keygen {
     }
 
     public static void main(String[] args) {
-        System.out.println(keygen.MakeKey("Vasa", 12, 122));
+        args = new String[1];
+        args[0] = "Partizanin";
 
         if (args.length == 0) {
-            System.err.printf("*** Usage: %s name%n", keygen.class.getCanonicalName());
+            System.err.printf("*** Usage: %s name%n", keygen13.class.getCanonicalName());
             System.exit(1);
         }
         Random r = new Random();
