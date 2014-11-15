@@ -11,7 +11,7 @@ package hw3.threads;
 public class Main {
 
     public static void main(String[] args) {
-        Holder holder = Holder.getINSTANCE(2);
+        Holder holder = Holder.getINSTANCE(5);
         Producer producer = new Producer(holder, "holder");
         Consumer consumer = new Consumer(holder, "holder");
         producer.start();

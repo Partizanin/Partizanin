@@ -1,5 +1,7 @@
 package hw3.threads;
 
+import java.time.LocalTime;
+
 /**
  * Created with Intellij IDEA.
  * Project name: Курсы
@@ -35,7 +37,6 @@ public class Holder {
         return instance;
     }*/
     synchronized int get() {
-
         while (!valueSet) {
             try {
                 wait();
@@ -45,7 +46,7 @@ public class Holder {
 
         }
 
-        System.out.println("Получено: " + n);
+        System.out.println("Получено: " + n + LocalTime.now());
         valueSet = false;
 
         try {
@@ -68,7 +69,7 @@ public class Holder {
         }
         this.n = n;
         valueSet = true;
-        System.out.println("Отправлено: " + n);
+        System.out.println("Отправлено: " + n + LocalTime.now());
 
         try {
             Thread.sleep(1000);
