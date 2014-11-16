@@ -17,7 +17,7 @@ public class Permutation {
     private static int count2 = 1;
 
     public static void main(String[] args) throws java.lang.Exception {
-        String s = "123";
+        String s = "12345";
         Set<Character> set = new HashSet<>();
         dfs(s, "", set);
         System.out.println("------------");
