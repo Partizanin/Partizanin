@@ -1,4 +1,4 @@
-package myWork.timeCalculator;
+package timeCalculator;
 
 import javax.swing.*;
 import javax.swing.text.AttributeSet;
@@ -36,15 +36,12 @@ public class MainWindow2 extends JFrame {
     private final JButton buttonCount = new JButton("=");
     private final JButton buttonCountF = new JButton("=");
     private final JLabel labelTimeCount = new JLabel("Хвилини");
-    ImageIcon ico = new ImageIcon("D:\\Illia\\Java\\Projects\\Partizanin\\src\\main\\java\\myWork\\timeCalculator\\icons\\left_48.png");
+    ImageIcon ico = new ImageIcon(FilePath.class.getResource("/icons/left_48.png").getPath());
     private final JButton buttonReturnValue = new JButton(ico);
     private final JButton buttonReturnValue2 = new JButton(ico);
-    ImageIcon icoWarn = new ImageIcon("D:\\Illia\\Java\\Projects\\Partizanin\\src\\main\\java\\myWork\\timeCalculator\\icons\\warning_48.png");
-    private final JLabel labelWarn = new JLabel(icoWarn);
-    ImageIcon icoUp = new ImageIcon("D:\\Illia\\Java\\Projects\\Partizanin\\src\\main\\java\\myWork\\timeCalculator\\icons\\up_48.png");
-    private final JButton textUp = new JButton(icoUp);
-    ImageIcon icoDown = new ImageIcon("D:\\Illia\\Java\\Projects\\Partizanin\\src\\main\\java\\myWork\\timeCalculator\\icons\\down_48.png");
-    private final JButton textDown = new JButton(icoDown);
+    private final JLabel labelWarn = new JLabel(new ImageIcon(FilePath.class.getResource("/icons/warning_48.png").getPath()));
+    private final JButton textUp = new JButton(new ImageIcon(FilePath.class.getResource("/icons/up_48.png").getPath()));
+    private final JButton textDown = new JButton(new ImageIcon(FilePath.class.getResource("/icons/down_48.png").getPath()));
     private JMenuItem menuMinus;
 
     private MainWindow2() {
@@ -936,5 +933,6 @@ public class MainWindow2 extends JFrame {
             }
         }
     }
+
 }
 
