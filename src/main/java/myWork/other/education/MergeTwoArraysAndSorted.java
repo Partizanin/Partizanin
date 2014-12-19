@@ -86,7 +86,7 @@ public class MergeTwoArraysAndSorted {
 
             for (int j = i + 1; j < arr.length; j++) {
 
-                if (arr[j] < minValue) {
+                if (minValue > arr[j]) {
                     minIndex = j;
                     minValue = arr[j];
                 }
@@ -96,9 +96,11 @@ public class MergeTwoArraysAndSorted {
                 int temp = arr[i];
                 arr[i] = arr[minIndex];
                 arr[minIndex] = temp;
-
             }
+
+
         }
+
     }
 
     public static void bubbleSort2(int[] arr) {
