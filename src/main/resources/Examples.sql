@@ -57,6 +57,12 @@ DROP TABLE NOTEBOOK ;
 --Удаление таблицы со связями
 DROP TABLE MANUFACTURER CASCADE  CONSTRAINTS ;
 
+-- вибрать всех робочих у которых комисии не нул 
+SELECT FIRST_NAME,COMMISSION_PCT
+FROM EMPLOYEES
+WHERE COMMISSION_PCT IS NOT NULL;
+
+
 
 
 
