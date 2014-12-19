@@ -1,7 +1,5 @@
 package myWork.other.education;
 
-import java.util.Arrays;
-
 /**
  * Created with Intellij IDEA.
  * Project name: Partizanin.
@@ -17,7 +15,9 @@ public class MergeTwoArraysAndSorted {
         Integer[] res = merge(new Integer[]{3, 7, 4, 6, 5}, new Integer[]{10, 1, 9, 2, 8});
 
         int[] arr = {10, 1, 9, 2, 8, 3, 7, 4, 6, 5};
-        bubbleSort2(arr);
+        /*bubbleSort2(arr);*/
+        selectionSort2(arr);
+
 
         for (int i : arr) {
             System.out.print(i + " ");
@@ -36,29 +36,25 @@ public class MergeTwoArraysAndSorted {
     }
 
     public static void selectionSort(Integer[] arr) {
-    /*По очереди будем просматривать все подмножества
-      элементов массива (0 - последний, 1-последний,
-      2-последний,...)*/
+
         for (int i = 0; i < arr.length; i++) {
-        /*Предполагаем, что первый элемент (в каждом
-           подмножестве элементов) является минимальным */
-            int min = arr[i];
-            int min_i = i;
-        /*В оставшейся части подмножества ищем элемент,
-           который меньше предположенного минимума*/
+
+            int minValue = arr[i];
+            int minIndex = i;
+
             for (int j = i + 1; j < arr.length; j++) {
-                //Если находим, запоминаем его индекс
-                if (arr[j] < min) {
-                    min = arr[j];
-                    min_i = j;
+
+                if (arr[j] < minValue) {
+                    minIndex = j;
+                    minValue = arr[j];
                 }
             }
-        /*Если нашелся элемент, меньший, чем на текущей позиции,
-          меняем их местами*/
-            if (i != min_i) {
-                int tmp = arr[i];
-                arr[i] = arr[min_i];
-                arr[min_i] = tmp;
+
+            if (i != minIndex) {
+                int temp = arr[i];
+                arr[i] = arr[minIndex];
+                arr[minIndex] = temp;
+
             }
         }
     }
@@ -85,35 +81,34 @@ public class MergeTwoArraysAndSorted {
 
         for (int i = 0; i < arr.length; i++) {
 
-            int minV = arr[i];
-            int minI = i;
+            int minValue = arr[i];
+            int minIndex = i;
 
             for (int j = i + 1; j < arr.length; j++) {
 
-                if (arr[j] < minV) {
-                    minV = arr[j];
-                    minI = j;
+                if (arr[j] < minValue) {
+                    minIndex = j;
+                    minValue = arr[j];
                 }
             }
 
-            if (i != minI) {
-                int tmp = arr[i];
-                arr[i] = minV;
-                arr[minI] = tmp;
+            if (i != minIndex) {
+                int temp = arr[i];
+                arr[i] = arr[minIndex];
+                arr[minIndex] = temp;
+
             }
         }
     }
 
     public static void bubbleSort2(int[] arr) {
-
         for (int i = arr.length - 1; i > 0; i--) {
 
             for (int j = 0; j < i; j++) {
-
                 if (arr[j] > arr[j + 1]) {
-                    int tmp = arr[j];
+                    int temp = arr[j];
                     arr[j] = arr[j + 1];
-                    arr[j + 1] = tmp;
+                    arr[j + 1] = temp;
                 }
             }
         }
