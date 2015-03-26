@@ -2,7 +2,7 @@ package hw2.hash;
 
 /**
  * Created with Intellij IDEA.
- * Project name: proff16
+ * Project name: Partizanin
  * User: Partizanin
  * Date: 12.05.2014
  * Time: 15:29

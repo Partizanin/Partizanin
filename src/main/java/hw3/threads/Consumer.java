@@ -19,6 +19,9 @@ public class Consumer extends Thread {
             this.count = q.count;
         }
 
+        if (name == null||name.equals("")) {
+            name = "holder";
+        }
         currentThread().setName(name);
     }
 

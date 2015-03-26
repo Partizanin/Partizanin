@@ -4,62 +4,10 @@
          xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
     <modelVersion>4.0.0</modelVersion>
 
-    <groupId>proff16</groupId>
-    <artifactId>proff16</artifactId>
+    <groupId>Partizanin</groupId>
+    <artifactId>Partizanin</artifactId>
     <packaging>pom</packaging>
     <version>1.0-SNAPSHOT</version>
-
-    <!--  <modules>
-     <module>Partizanin_web</module>
-     <module>DynamicTableExample</module>
-     <module>Partizanin</module>
-     <module>partizanin_spring</module>
-     <module>oleksiy_milashenko</module>
-     <module>oleksiy_milashenko_web</module>
-     <module>partizanin_android</module>
-     <module>oleksiy_milashenko_spring</module>
-     <module>commandWork_web</module>
-     <module>ganna_turchyna</module>
-     <module>marina_kirsanova_spring</module>
-     <module>Merkushev_Michail_web</module>
-     <module>marina_kirsanova_web</module>
-     <module>maxim_gerasimchuk_android</module>
-     <module>proff16_examples_web</module>
-     <module>proff16_examples</module>
-     <module>proff16_examples_spring</module>
-     <module>proff16_examples_android</module>
-     <module>yevhenii_pinchuk_web</module>
-     <module>yevhenii_pinchuk_spring</module>
-     <module>oleg_riabokin</module>
-     <module>oleg_riabokin_spring</module>
-     <module>yurii_kotov</module>
-     <module>yurii_kotov_web</module>
-     <module>yurii_kotov_spring</module>
-     <module>yurii_kotov_android</module>
-     <module>Tatasya</module>
-     <module>Merkushev_Michail</module>
-     <module>Snitsar</module>
-     <module>marina_kirsanova</module>
-     <module>vitalik_goncharenko</module>
-     <module>vitalik_goncharenko_web</module>
-     <module>vitalik_goncharenko_spring</module>
-     <module>yevhenii_pinchuk</module>
-     <module>gennadiy_kozhushok</module>
-     <module>vitaliy_mashkovskiyy</module>
-     <module>Sergey_pistrik</module>
-     <module>sergey_proshuta</module>
-     <module>sergey_proshuta_web</module>
-     <module>valeriy_garbuzov</module>
-     <module>valeriy_garbuzov_web</module>
-     <module>igor_postoy</module>
-     <module>maxim_gerasimchuk</module>
-     <module>maxim_gerasimchuk_web</module>
-     <module>maxim_gerasimchuk_spring</module>
-     <module>grigory_vointsev</module>
-     <module>vitaliy_mashkovskiy_web</module>
-     <module>vitaliy_mashkovskiy_spring</module>
-     <module>vitaliy_mashkovskiy_web_class</module>
- </modules>-->
 
     <properties>
         <junit.version>4.8.2</junit.version>

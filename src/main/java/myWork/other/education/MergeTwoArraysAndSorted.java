@@ -12,10 +12,16 @@ public class MergeTwoArraysAndSorted {
 
     public static void main(String[] args) {
 
+/*
         Integer[] res = merge(new Integer[]{3, 7, 4, 6, 5}, new Integer[]{10, 1, 9, 2, 8});
+*/
 
         int[] arr = {10, 1, 9, 2, 8, 3, 7, 4, 6, 5};
-        /*bubbleSort2(arr);*/
+
+        /*bubbleSort2(arr);
+        System.out.println("bubbleSort2");
+*/
+        System.out.println("selectionSort2");
         selectionSort2(arr);
 
 

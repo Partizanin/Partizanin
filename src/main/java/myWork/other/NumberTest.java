@@ -2,7 +2,7 @@ package myWork.other;
 
 /**
  * Created with Intellij IDEA.
- * Project name: proff16
+ * Project name: Partizanin
  * User: Partizanin
  * Date: 20.08.2014
  * Time:  11:14

@@ -26,6 +26,9 @@ public class Producer extends Thread {
         if (q.count != 0) {
             this.count = q.count;
         }
+        if (name == null||name.equals("")) {
+            name = "holder";
+        }
 
         currentThread().setName(name);
     }

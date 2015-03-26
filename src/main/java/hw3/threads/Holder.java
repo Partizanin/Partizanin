@@ -12,18 +12,33 @@ import java.time.LocalTime;
  */
 
 public class Holder {
-    int n;
+    int number;
     boolean valueSet = false;
     int count = 0;
     private static Holder INSTANCE;
 
-    private Holder(int count) {
+    private int timeSleep  = 600;
+
+    private Holder(int count,int timeSleep) {
+
+        if (count == 0) {
+            count = 5;
+        }
+        if (timeSleep != 0) {
+
+            this.timeSleep = timeSleep;
+        }
+
         this.count = count;
     }
 
-    public static synchronized Holder getINSTANCE(int count) {
+    public static synchronized Holder getINSTANCE(int count,int timeSleep) {
         if (INSTANCE == null) {
-            INSTANCE = new Holder(count);
+            if (count == 0) {
+                count = 5;
+            }
+
+            INSTANCE = new Holder(count,timeSleep);
         }
         return INSTANCE;
     }
@@ -36,6 +51,7 @@ public class Holder {
         }
         return instance;
     }*/
+
     synchronized int get() {
         while (!valueSet) {
             try {
@@ -46,16 +62,15 @@ public class Holder {
 
         }
 
-        System.out.println("Получено: " + n + LocalTime.now());
+        System.out.println("Получено: " + number + " " + LocalTime.now());
         valueSet = false;
-
         try {
-            Thread.sleep(1000);
+            Thread.sleep(timeSleep);
         } catch (InterruptedException e) {
             e.printStackTrace();
         }
         notify();
-        return n;
+        return number;
 
     }
 
@@ -67,12 +82,12 @@ public class Holder {
                 e.printStackTrace();
             }
         }
-        this.n = n;
+        this.number = n;
         valueSet = true;
-        System.out.println("Отправлено: " + n + LocalTime.now());
+        System.out.println("Отправлено: " + n + " " + LocalTime.now());
 
         try {
-            Thread.sleep(1000);
+            Thread.sleep(timeSleep);
         } catch (InterruptedException e) {
             e.printStackTrace();
         }

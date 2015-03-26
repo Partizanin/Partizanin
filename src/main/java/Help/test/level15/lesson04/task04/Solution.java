@@ -2,7 +2,7 @@ package Help.test.level15.lesson04.task04;
 
 /**
  * Created with Intellij IDEA.
- * Project name: proff16
+ * Project name: Partizanin
  * User: Partizanin
  * Date: 16.08.2014
  * Time:  15:26

@@ -37,9 +37,9 @@ join jobs j on e.job_id = j.job_id
 where j.job_title = 'Programmer';
 
 -- виюрать всех програмистов
-select e.first_name,e.salary
-from employees e 
-where e.job_id = 'IT_PROG';
+select e.first_name,e.salary,e.JOB_ID,e.DEPARTMENT_ID
+from employees e
+where e.DEPARTMENT_ID = '60';
 
 
 
@@ -60,7 +60,9 @@ DROP TABLE MANUFACTURER CASCADE  CONSTRAINTS ;
 -- вибрать всех робочих у которых комисии не нул 
 SELECT FIRST_NAME,COMMISSION_PCT
 FROM EMPLOYEES
-WHERE COMMISSION_PCT IS NOT NULL;
+WHERE COMMISSION_PCT IS NOT NULL AND
+ROWNUM <= 4;
+
 
 
 

@@ -11,7 +11,7 @@ import java.util.*;
 
 /**
  * Created with Intellij IDEA.
- * Project name: proff16
+ * Project name: Partizanin
  * User: Partizanin
  * Date: 10.06.2014
  * Time: 13:29

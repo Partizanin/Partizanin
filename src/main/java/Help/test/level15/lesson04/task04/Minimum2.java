@@ -6,7 +6,7 @@ import java.io.InputStreamReader;
 
 /**
  * Created with Intellij IDEA.
- * Project name: proff16
+ * Project name: Partizanin
  * User: Partizanin
  * Date: 13.10.2014
  * Time:  11:23

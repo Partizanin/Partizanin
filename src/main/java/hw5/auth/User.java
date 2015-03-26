@@ -4,7 +4,7 @@ import java.util.Date;
 
 /**
  * Created with Intellij IDEA.
- * Project name: proff16
+ * Project name: Partizanin
  * User: Partizanin
  * Date: 05.06.2014
  * Time: 18:08

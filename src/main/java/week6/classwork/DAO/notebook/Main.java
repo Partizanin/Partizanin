@@ -7,7 +7,7 @@ import java.util.Locale;
 
 /**
  * Created with Intellij IDEA.
- * Project name: proff16
+ * Project name: Partizanin
  * User: Partizanin
  * Date: 08.06.2014
  * Time: 17:11

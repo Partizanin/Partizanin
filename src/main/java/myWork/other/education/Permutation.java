@@ -17,11 +17,11 @@ public class Permutation {
     private static int count2 = 1;
 
     public static void main(String[] args) throws java.lang.Exception {
-        String s = "12345";
+        String s = "123";
         Set<Character> set = new HashSet<>();
         dfs(s, "", set);
-        System.out.println("------------");
-        permutation("", s);
+        System.out.println("------------ permutation2");
+        permutation2("", s);
     }
 
     static void dfs(String s, String sol, Set<Character> set) {
@@ -42,6 +42,17 @@ public class Permutation {
     }
 
     private static void permutation(String prefix, String str) {
+        int n = str.length();
+        if (n == 0) {
+            System.out.println(prefix + ": " + count2);
+            count2++;
+        } else {
+            for (int i = 0; i < n; i++)
+                permutation(prefix + str.charAt(i), str.substring(0, i) + str.substring(i + 1, n));
+        }
+    }
+
+    private static void permutation2(String prefix, String str) {
         int n = str.length();
         if (n == 0) {
             System.out.println(prefix + ": " + count2);

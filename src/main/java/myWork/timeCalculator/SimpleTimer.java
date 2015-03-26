@@ -1,7 +1,6 @@
 package myWork.timeCalculator;
 
 import javax.swing.*;
-import javax.swing.Timer;
 import java.awt.*;
 import java.awt.event.ActionListener;
 
@@ -24,6 +23,9 @@ public class SimpleTimer extends JFrame {
 
     public SimpleTimer() {
         super("Simple MyTimer");
+    }
+
+    public void init(){
         setDefaultCloseOperation(EXIT_ON_CLOSE);
 
         label = new JLabel("Wait for " + counter + " sec", JLabel.CENTER);
@@ -49,7 +51,13 @@ public class SimpleTimer extends JFrame {
         setVisible(true);
     }
 
-    public static void main(String[] args) {
+    public void start(){
+        init();
         SwingUtilities.invokeLater(SimpleTimer::new);
+    }
+
+
+    public static void main(String[] args) {
+        new SimpleTimer().start();
     }
 }
