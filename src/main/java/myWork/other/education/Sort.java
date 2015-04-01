@@ -1,51 +1,25 @@
-package myWork.other;
-
-import myWork.other.education.Timer;
+package myWork.other.education;
 
 import java.util.Arrays;
 import java.util.Collections;
 
 /**
  * Created with Intellij IDEA.
- * Project name: Partizanin
- * User: Partizanin
- * Date: 30.08.2014
- * Time:  8:46
- * To change this template use File|Setting|File Templates.
+ * Project name: Partizanin.
+ * User: Partizanin.
+ * Date: 01.04.2015.
+ * Time:  19:54.
+ * To change this template use File|Setting|Editor|File and Code Templates.
  */
-public class Main {
+public class Sort {
 
     private static Integer[] numbers;
 
-    public static void main(String[] args) {
-        Timer timer = new Timer();
-        Integer[] arr = createArray(1000000);
-
-    /*    timer.start("selectionSort");
-        selectionSort(arr);
-        timer.stop();
-*//*
-        timer.start("quickSort");
-        sort(arr);
-        timer.stop();
-*/
-      /*  timer.start("bubbleSort");
-        bubbleSort(arr);
-        timer.stop();
-*/
-        timer.start("gnomeSort");
-        gnomeSort(arr);
-        timer.stop();
-
-        timer.end();
-    }
-
-
-    public static Integer[] createArray(int length) {
+    public  Integer[] createArray(int length) {
         Integer[] arr = new Integer[length];
 
         for (int i = 0; i < arr.length; i++) {
-            arr[i] = i;
+            arr[i] = i + 1;
         }
 
         Collections.shuffle(Arrays.asList(arr));
@@ -53,7 +27,7 @@ public class Main {
         return arr;
     }
 
-    public static void selectionSort(Integer[] array) {
+    public  void selectionSort(Integer[] array) {
 
         for (int i = 0; i < array.length; i++) {
 
@@ -77,7 +51,7 @@ public class Main {
         }
     }
 
-    public static void bubbleSort(Integer[] arr) {
+    public  void bubbleSort(Integer[] arr) {
     /*Внешний цикл каждый раз сокращает фрагмент массива,
       так как внутренний цикл каждый раз ставит в конец
       фрагмента максимальный элемент*/
@@ -95,7 +69,7 @@ public class Main {
         }
     }
 
-    static void gnomeSort(Integer[] theArray) {
+    public void gnomeSort(Integer[] theArray) {
         for (int index = 1; index < theArray.length; ) {
             if (theArray[index - 1] <= theArray[index]) {
                 ++index;
@@ -111,20 +85,20 @@ public class Main {
         }
     }
 
-    public static void sort(Integer[] values) {
+    public  void quickSort(Integer[] values) {
         // check for empty or null array
-        if (values ==null || values.length==0){
+        if (values == null || values.length == 0) {
             return;
         }
         numbers = values;
         int number = values.length;
-        quickSort(0, number - 1);
+        sort(0, number - 1);
     }
 
-    private static void quickSort(Integer low, Integer high) {
+    private  void sort(Integer low, Integer high) {
         Integer i = low, j = high;
         // Get the pivot element from the middle of the list
-        Integer pivot = numbers[low + (high-low)/2];
+        Integer pivot = numbers[low + (high - low) / 2];
 
         // Divide into two lists
         while (i <= j) {
@@ -152,16 +126,15 @@ public class Main {
         }
         // Recursion
         if (low < j)
-            quickSort(low, j);
+            sort(low, j);
         if (i < high)
-            quickSort(i, high);
+            sort(i, high);
     }
 
-    private static void exchange(Integer i, Integer j) {
+    private  void exchange(Integer i, Integer j) {
         Integer temp = numbers[i];
         numbers[i] = numbers[j];
         numbers[j] = temp;
     }
+
 }
-
-
