@@ -89,8 +89,8 @@ public class keygen14 {
     public static String MakeKey(String name, int days, int id) {
         id %= 100000;
         byte bkey[] = new byte[12];
-        bkey[0] = (byte) 1; // Product type: IntelliJ IDEA is 1
-        bkey[1] = 14; // version
+        bkey[0] = (byte) 7; // Product type: IntelliJ IDEA is 1
+        bkey[1] = 10; // version
         Date d = new Date();
         long ld = (d.getTime() >> 16);
         bkey[2] = (byte) (ld & 255);
