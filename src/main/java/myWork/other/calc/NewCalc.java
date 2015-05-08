@@ -8,7 +8,7 @@ import java.util.Stack;
 public class NewCalc {
     public static void main(String[] args) {
 
-        System.out.println(eval("12+22-10*4/2"));
+        System.out.println(eval("12+22-10*(6/2)"));
     }
     public static boolean isOperator(char c) {
         return c == '+' || c == '-' || c == '*' || c == '/';
