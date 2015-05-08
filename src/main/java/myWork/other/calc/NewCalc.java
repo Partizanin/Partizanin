@@ -7,14 +7,14 @@ import java.util.Stack;
  */
 public class NewCalc {
     public static void main(String[] args) {
-
-        System.out.println(eval("12+22-10*(6/2)"));
+        NewCalc nc = new NewCalc();
+        System.out.println(nc.eval("12+22-10*(6/2)"));
     }
-    public static boolean isOperator(char c) {
+    private  boolean isOperator(char c) {
         return c == '+' || c == '-' || c == '*' || c == '/';
     }
 
-    public static int priority(char op) {
+    private int priority(char op) {
 
         if (op == '+' || op == '-') {
             return 1;
@@ -27,7 +27,7 @@ public class NewCalc {
 
     }
 
-    public static void processOperator(Stack<Double> st, char op) {
+    private void processOperator(Stack<Double> st, char op) {
 
         double r = st.pop();
         double l = st.pop();
@@ -47,7 +47,7 @@ public class NewCalc {
 
     }
 
-    public static double eval(String s) {
+    public double eval(String s) {
         Stack<Double> st = new Stack<Double>();
         Stack<Character> op = new Stack<Character>();
 
