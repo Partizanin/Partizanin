@@ -119,7 +119,7 @@ public class Sort {
             // values.
             // As we are done we can increase i and j
             if (i <= j) {
-                exchange(i, j);
+                swap(i, j);
                 i++;
                 j--;
             }
