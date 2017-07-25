@@ -131,7 +131,7 @@ public class Sort {
             sort(i, high);
     }
 
-    private  void exchange(Integer i, Integer j) {
+    private  void swap(Integer i, Integer j) {
         Integer temp = numbers[i];
         numbers[i] = numbers[j];
         numbers[j] = temp;
